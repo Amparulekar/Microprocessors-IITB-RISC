@@ -10,8 +10,8 @@ entity ALU_1 is
     port(
            ALU_A : in std_logic_vector (15 downto 0);
            ALU_B : in std_logic_vector (15 downto 0);
-           ALU_Carry : inout std_logic;
-           ALU_Zero : inout std_logic;
+           ALU_Carry : inout std_logic := '0';
+           ALU_Zero : inout std_logic := '0';
            ALU_Select : in std_logic_vector (3 downto 0);
            ALU_Output : out std_logic_vector (15 downto 0)
         );
@@ -27,7 +27,16 @@ begin
                 ALU_Result <= (others => '0');
             when "0001" =>
                 ALU_Result <= unsigned(ALU_A) + unsigned(ALU_B); 
-               
+            when "0010" =>
+                if (ALU_Carry='1') then
+                    ALU_Result <= unsigned(ALU_A) + unsigned(ALU_B); 
+                end if;
+            when "0011" =>
+                if (ALU_Zero='0') then
+                     ALU_Result <= unsigned(ALU_A) + unsigned(ALU_B);
+                 end if;
+             when "0100" =>
+               --   
             when others => 
                ALU_Output <= (others => '0');
         end case;
