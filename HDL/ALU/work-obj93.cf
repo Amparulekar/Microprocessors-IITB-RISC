@@ -1,0 +1,4 @@
+v 4
+file . "ALU.vhd" "ddf9447a7ae9b2a917725af99e0242411e9f2068" "20220407145042.521":
+  entity alu_1 at 1( 0) + 0 on 16;
+  architecture alu_process of alu_1 at 20( 554) + 0 on 17;
