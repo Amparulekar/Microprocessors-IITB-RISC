@@ -1,0 +1,24 @@
+$date
+  Sat Apr  9 16:11:13 2022
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module se_9_16_tb $end
+$var reg 9 ! in_se_9_16[8:0] $end
+$var reg 16 " out_se_9_16[15:0] $end
+$upscope $end
+$enddefinitions $end
+#0
+b001010100 !
+bUUUUUUUUUUUUUUUU "
+#10000000
+b010101010 !
+#20000000

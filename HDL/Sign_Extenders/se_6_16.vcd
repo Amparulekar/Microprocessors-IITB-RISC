@@ -1,0 +1,33 @@
+$date
+  Sat Apr  9 16:05:33 2022
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module se_6_16_tb $end
+$var reg 6 ! in_se_6_16[5:0] $end
+$var reg 16 " out_se_6_16[15:0] $end
+$scope module se1 $end
+$var reg 6 # in_se_6_16[5:0] $end
+$var reg 16 $ out_se_6_16[15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+b000100 !
+b0000000000000100 "
+b000100 #
+b0000000000000100 $
+#10000000
+b100001 !
+b0000000000100001 "
+b100001 #
+b0000000000100001 $
+#20000000
