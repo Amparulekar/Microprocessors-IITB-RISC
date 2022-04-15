@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 --use ieee.std_logic_unsigned.all;
 --use ieee.numeric_std.all;
-use ieee.math_real.all;
+--use ieee.math_real.all;
 --use ieee.numeric_bit_unsigned.all;
 
 entity ALU_1 is
@@ -26,19 +26,33 @@ begin
             when "0000" =>
                 ALU_Result <= (others => '0');
             when "0001" =>
-                ALU_Result <= unsigned(ALU_A) + unsigned(ALU_B); 
+                ALU_Result <= unsigned('0' & ALU_A) + unsigned('0' & ALU_B); 
             when "0010" =>
                 if (ALU_Carry='1') then
-                    ALU_Result <= unsigned(ALU_A) + unsigned(ALU_B); 
+                    ALU_Result <= unsigned('0' & ALU_A) + unsigned('0' & ALU_B); 
                 end if;
             when "0011" =>
                 if (ALU_Zero='0') then
-                     ALU_Result <= unsigned(ALU_A) + unsigned(ALU_B);
+                     ALU_Result <= unsigned('0' & ALU_A) + unsigned('0' & ALU_B);
                  end if;
-             when "0100" =>
-               --   
-            when others => 
-               ALU_Output <= (others => '0');
+            when "0100" =>
+					 ALU_Result <= unsigned('0' & ALU_A) + shift_left(unsigned('0' & ALU_B), 1);
+            when "0101" => 
+                ALU_Result <= unsigned('0' & ALU_A) + unsigned('0' & ALU_B);
+			when "0110" =>  
+					 ALU_Result <= not(unsigned('0' & ALU_A) and unsigned('0' & ALU_B));
+			when "0111" =>
+					 if (ALU_Carry='1') then 
+						  ALU_Result <= not(unsigned('0' & ALU_A) and unsigned('0' & ALU_B));
+					 end if;
+			when "1000" =>
+					 if (ALU_Zero='1') then 
+						  ALU_Result <= not(unsigned('0' & ALU_A) and unsigned('0' & ALU_B));
+					 end if;
+			when "1001" =>
+					 ALU_Result <= unsigned('0' & ALU_A) - unsigned('0' & ALU_B);
+			when others =>
+                     ALU_Output <= (others => '0');
         end case;
         ALU_Output <= std_logic_vector(ALU_Result(15 downto 0));
         ALU_Carry <= std_logic(ALU_Result(16));
