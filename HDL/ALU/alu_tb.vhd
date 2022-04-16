@@ -6,12 +6,12 @@ end entity;
 architecture test of alu_tb is
 	component ALU_1
 		port (
-			ALU_A : in std_logic_vector (15 downto 0);
-			ALU_B : in std_logic_vector (15 downto 0);
+			ALU_A : in std_logic_vector (15 downto 0) := (others =>'0');
+			ALU_B : in std_logic_vector (15 downto 0) := (others =>'0');
 			ALU_Carry : inout std_logic := '0';
 			ALU_Zero : inout std_logic := '0';
-			ALU_Select : in std_logic_vector (3 downto 0);
-			ALU_Output : out std_logic_vector (15 downto 0)
+			ALU_Select : in std_logic_vector (3 downto 0):=(others =>'0');
+			ALU_Output : out std_logic_vector (15 downto 0 ):=(others =>'0')
 		);
 	end component;
 
@@ -23,16 +23,26 @@ begin
 
 	process
 	begin
-		ALU_A <= "0000000000000001";
-		ALU_B <= "0000000000000001";
+		ALU_A <= "1000000000000001";
+		ALU_B <= "1000000000000001";
 		ALU_Carry <= '0';
 		ALU_Zero <= '0';
+		ALU_Select <= "0001";
+		wait for 10 ns;
+		ALU_A <= "0000000000000001";
+		ALU_B <= "0000000000000011";
 		ALU_Select <= "0010";
 		wait for 10 ns;
 		ALU_A <= "0000000000000001";
 		ALU_B <= "0000000000000001";
-		ALU_Carry <= '1';
-		ALU_Zero <= '0';
+		-- ALU_Carry <= '0';
+		-- ALU_Zero <= '0';
+		ALU_Select <= "0010";
+		wait for 10 ns;
+		ALU_A <= "0000000000000001";
+		ALU_B <= "0000000000000001";
+		-- ALU_Carry <= '1';
+		-- ALU_Zero <= '0';
 		ALU_Select <= "0010";
 		wait for 10 ns;
 		ALU_A <= "0000000000000001";
