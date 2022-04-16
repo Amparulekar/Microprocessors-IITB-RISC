@@ -23,33 +23,33 @@ begin
     process (ALU_A, ALU_B, ALU_Select)
     begin
         case ALU_Select is
-            when "0000" =>
+            when "0000" => --nothing
                 ALU_Result <= (others => '0');
-            when "0001" =>
+            when "0001" => --add
                 ALU_Result <= unsigned('0' & ALU_A) + unsigned('0' & ALU_B);
-            when "0010" =>
+            when "0010" => --adc
                 if (ALU_Carry = '1') then
                     ALU_Result <= unsigned('0' & ALU_A) + unsigned('0' & ALU_B);
                 end if;
-            when "0011" =>
-                if (ALU_Zero = '0') then
+            when "0011" => --adz
+                if (ALU_Zero = '1') then
                     ALU_Result <= unsigned('0' & ALU_A) + unsigned('0' & ALU_B);
                 end if;
-            when "0100" =>
+            when "0100" => --adl
                 ALU_Result <= unsigned('0' & ALU_A) + shift_left(unsigned('0' & ALU_B), 1);
-            when "0101" =>
+            when "0101" => --adi
                 ALU_Result <= unsigned('0' & ALU_A) + unsigned('0' & ALU_B);
-            when "0110" =>
+            when "0110" => --ndu
                 ALU_Result <= not(unsigned('0' & ALU_A) and unsigned('0' & ALU_B));
-            when "0111" =>
+            when "0111" => --ndc
                 if (ALU_Carry = '1') then
                     ALU_Result <= not(unsigned('0' & ALU_A) and unsigned('0' & ALU_B));
                 end if;
-            when "1000" =>
+            when "1000" => --ndz
                 if (ALU_Zero = '1') then
                     ALU_Result <= not(unsigned('0' & ALU_A) and unsigned('0' & ALU_B));
                 end if;
-            when "1001" =>
+            when "1001" => -- sub?
                 ALU_Result <= unsigned('0' & ALU_A) - unsigned('0' & ALU_B);
             when others =>
                 ALU_Output <= (others => '0');
