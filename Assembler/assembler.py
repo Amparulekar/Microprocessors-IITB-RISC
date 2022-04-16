@@ -1,6 +1,6 @@
 """
 Author: Nikhil Kaniyeri
-
+Description: Converts human readable ASM code to binary that can be loaded directly on to the processor memory.
 """
 import re
 binary=""
