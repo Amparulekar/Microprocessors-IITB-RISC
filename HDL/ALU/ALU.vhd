@@ -8,12 +8,12 @@ use ieee.numeric_std.all;
 
 entity ALU_1 is
     port (
-        ALU_A : in std_logic_vector (15 downto 0) := (others =>'0');
-        ALU_B : in std_logic_vector (15 downto 0) := (others =>'0');
+        ALU_A : in std_logic_vector (15 downto 0);
+        ALU_B : in std_logic_vector (15 downto 0);
         ALU_Carry : inout std_logic := '0';
         ALU_Zero : inout std_logic := '0';
-        ALU_Select : in std_logic_vector (3 downto 0):=(others =>'0');
-        ALU_Output : out std_logic_vector (15 downto 0 ):=(others =>'0')
+        ALU_Select : in std_logic_vector (3 downto 0);
+        ALU_Output : out std_logic_vector (15 downto 0)
     );
 end entity ALU_1;
 
@@ -27,11 +27,9 @@ begin
                 ALU_Result <= (others => '0');
             when "0001" => --add
                 ALU_Result <= unsigned('0' & ALU_A) + unsigned('0' & ALU_B);
-                ALU_Carry <= std_logic(ALU_Result(16));
             when "0010" => --adc
                 if (ALU_Carry = '1') then
                     ALU_Result <= unsigned('0' & ALU_A) + unsigned('0' & ALU_B);
-                    ALU_Carry <= std_logic(ALU_Result(16));
                 end if;
             when "0011" => --adz
                 if (ALU_Zero = '1') then
