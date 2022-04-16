@@ -40,14 +40,14 @@ begin
             when "0101" => --adi
                 ALU_Result <= unsigned('0' & ALU_A) + unsigned('0' & ALU_B);
             when "0110" => --ndu
-                ALU_Result <= not(unsigned('0' & ALU_A) and unsigned('0' & ALU_B));
+                ALU_Result(15 downto 0) <= not(unsigned(ALU_A) and unsigned(ALU_B));
             when "0111" => --ndc
                 if (ALU_Carry = '1') then
-                    ALU_Result <= not(unsigned('0' & ALU_A) and unsigned('0' & ALU_B));
+                    ALU_Result(15 downto 0) <= not(unsigned(ALU_A) and unsigned(ALU_B));
                 end if;
             when "1000" => --ndz
                 if (ALU_Zero = '1') then
-                    ALU_Result <= not(unsigned('0' & ALU_A) and unsigned('0' & ALU_B));
+                    ALU_Result(15 downto 0) <= not(unsigned(ALU_A) and unsigned(ALU_B));
                 end if;
             when "1001" => -- sub?
                 ALU_Result <= unsigned('0' & ALU_A) - unsigned('0' & ALU_B);
