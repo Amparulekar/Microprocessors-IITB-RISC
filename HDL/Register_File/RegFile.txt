@@ -1,4 +1,0 @@
-This folder contains the vhdl code for register file and its component entities, and also for the testbench used for the same.
-Data can be fed into the Register file only through D3 and A3, and can only be read from the register file from D2, D1 via A2, A1 respectively. 
-Data is read at the start of a clock cycle and written at the end. 
-The Register file is clock synchronised.
