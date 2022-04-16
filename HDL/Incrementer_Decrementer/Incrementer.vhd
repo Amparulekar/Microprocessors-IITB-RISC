@@ -16,11 +16,7 @@ signal ID_Midway : unsigned(15 downto 0);
 begin
     process(ID_Input)
     begin
-        ID_Midway <= unsigned(ID_Input)+2;
+        ID_Midway <= unsigned(ID_Input)+1;
         ID_Output <= std_logic_vector(ID_Midway);
     end process;
 end architecture ID_Process;
-
-
-
-
