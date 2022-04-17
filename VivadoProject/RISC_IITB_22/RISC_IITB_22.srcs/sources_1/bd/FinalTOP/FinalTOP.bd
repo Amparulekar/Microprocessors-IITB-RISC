@@ -1,0 +1,53 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7z020clg484-1",
+      "name": "FinalTOP",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2018.3"
+    },
+    "design_tree": {
+      "ALU_1_0": ""
+    },
+    "components": {
+      "ALU_1_0": {
+        "vlnv": "xilinx.com:module_ref:ALU_1:1.0",
+        "xci_name": "FinalTOP_ALU_1_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ALU_1",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "ALU_A": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "ALU_B": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "ALU_Carry": {
+            "direction": "IO"
+          },
+          "ALU_Zero": {
+            "direction": "IO"
+          },
+          "ALU_Select": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "ALU_Output": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      }
+    }
+  }
+}
