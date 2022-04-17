@@ -8,23 +8,32 @@ end entity;
 architecture test of alu_tb is
     component ALU_1
     port(
-			  ALU_A : in std_logic_vector (15 downto 0);
-           ALU_B : in std_logic_vector (15 downto 0);
-           ALU_Carry : inout std_logic := '0';
-           ALU_Zero : inout std_logic := '0';
-           ALU_Select : in std_logic_vector (3 downto 0);
-           ALU_Output : out std_logic_vector (15 downto 0)
+		ALU_A : in std_logic_vector (15 downto 0) := (others => '0');
+        ALU_B : in std_logic_vector (15 downto 0) := (others => '0');
+        ALU_Carry : in std_logic := '0';
+        ALU_Zero : in std_logic := '0';
+        ALU_Select : in std_logic_vector (3 downto 0) := (others => '0');
+        ALU_Output : out std_logic_vector;
+        ALU_COUT : out std_logic;
+        ALU_ZOUT : out std_logic
     );
     end component;
 
     signal ALU_A, ALU_B, ALU_Output: std_logic_vector(15 downto 0);
-	 signal ALU_Carry, ALU_Zero: std_logic;
+	 signal ALU_Carry, ALU_Zero, ALU_COUT, ALU_ZOUT: std_logic;
 	 signal ALU_Select: std_logic_vector(3 downto 0);
 begin
-    ALU1 : ALU_1 port map (ALU_A => ALU_A, ALU_B => ALU_B, ALU_Carry => ALU_Carry, ALU_Zero => ALU_Zero, ALU_Select => ALU_Select, ALU_Output => ALU_Output);
+    ALU1 : ALU_1 port map (ALU_A => ALU_A, ALU_B => ALU_B, ALU_Carry => ALU_Carry, ALU_Zero => ALU_Zero, ALU_Select => ALU_Select, ALU_Output => ALU_Output, ALU_COUT => ALU_COUT, ALU_ZOUT => ALU_ZOUT);
 
     process
     begin
+		wait for 10 ns;
+		ALU_A <= "0000000000000001";
+		  ALU_B <= "0000000000000001";
+		  ALU_Carry <= '0';
+		  ALU_Zero <= '0';
+		  ALU_Select <= "0001";
+        wait for 10 ns;
         ALU_A <= "0000000000000001";
 		  ALU_B <= "0000000000000001";
 		  ALU_Carry <= '0';
