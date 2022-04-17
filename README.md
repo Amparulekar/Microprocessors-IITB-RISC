@@ -3,9 +3,9 @@ ITB-RISC is a 16-bit very simple computer based on the Little Computer Architect
 
 Nikhil Kaniyeri 200070050
 
-Kushagra Mishra 200010...
+Kushagra Mishra 200010042
 
-Joshi Tanmay Ajay 2000700..
+Joshi Tanmay Ajay 200070027
 
 Amruta Mahendra Parulekar 20d0700...
 
