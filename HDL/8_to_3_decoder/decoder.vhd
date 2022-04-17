@@ -33,16 +33,14 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity decoder is
     Port ( dec_in : in STD_LOGIC_VECTOR (7 downto 0);
-           dec_out : out STD_LOGIC_VECTOR (2 downto 0);
-           clk : STD_LOGIC);
+           dec_out : out STD_LOGIC_VECTOR (2 downto 0));
 end decoder;
 
 architecture Behavioral of decoder is
 
 begin
-    process(clk)
+    process(dec_in)
     begin
-        if CLK'event and CLK = '0' then
             case dec_in is
                 when "00000001" => dec_out <= "000";
                 when "00000010" => dec_out <= "001";
@@ -54,6 +52,5 @@ begin
                 when "10000000" => dec_out <= "111";           
                 when others => dec_out <= "XXX";
             end case;
-        end if;    
     end process;        
 end Behavioral;
