@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 --use ieee.std_logic_unsigned.all;
 --use ieee.numeric_std.all;
---use ieee.math_real.all;
+use ieee.math_real.all;
 --use ieee.numeric_bit_unsigned.all;
 
 entity ALU_1 is
@@ -51,14 +51,14 @@ begin
                     ALU_Result(15 downto 0) <= not(unsigned(ALU_A) and unsigned(ALU_B));
                 end if;
             when "1001" => -- sub? for beq
-                ALU_Result <= unsigned('0' & ALU_A) - unsigned('0' & ALU_B);
+                ALU_Result(15 downto 0) <= unsigned(ALU_A) - unsigned(ALU_B);
             when "1010" => --add w/o carry for lw/sw
                 ALU_Result(15 downto 0) <= unsigned(ALU_A) + unsigned(ALU_B);
             when others =>
-                ALU_Output <= (others => '0');
+                ALU_Result(15 downto 0) <= (others => '0');
         end case;
         ALU_Output <= std_logic_vector(ALU_Result(15 downto 0));
-        if (ALU_Result = "0000000000000000") then
+        if (ALU_Result(15 downto 0) = "0000000000000000") then
             ALU_Zero <= '1';
         else
             ALU_Zero <= '0';
