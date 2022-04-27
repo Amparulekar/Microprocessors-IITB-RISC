@@ -7,8 +7,8 @@ use ieee.math_real.all;
 entity Incrementer_Decrementer is
     port(
         ID_Input : in std_logic_vector(15 downto 0);
-        ID_Output: out std_logic_vector(15 downto 0);
-        ID_Select: in std_logic_vector(0 downto 0)
+        ID_Output: out std_logic_vector(15 downto 0)
+        --ID_Select: in std_logic_vector(0 downto 0)
     );
 end entity Incrementer_Decrementer;
 

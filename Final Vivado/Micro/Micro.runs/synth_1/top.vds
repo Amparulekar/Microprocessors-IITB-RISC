@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Wed Apr 27 16:01:26 2022
-# Process ID: 3292
+# Start of session at: Wed Apr 27 22:40:43 2022
+# Process ID: 17020
 # Current directory: C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.runs/synth_1/top.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7292 
+INFO: Helper process launched with PID 1300 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 362.148 ; gain = 100.777
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 361.625 ; gain = 85.066
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/new/top.vhd:38]
 INFO: [Synth 8-3491] module 'ALU_1' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/ALU/ALU.vhd:9' bound to instance 'ALU' of component 'ALU_1' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/new/top.vhd:250]
@@ -26,16 +26,252 @@ WARNING: [Synth 8-614] signal 'ALU_Result' is read in the process but is not in 
 INFO: [Synth 8-256] done synthesizing module 'ALU_1' (1#1) [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/ALU/ALU.vhd:22]
 INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/Register_File/Register.vhd:34' bound to instance 'T1' of component 'Reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/new/top.vhd:252]
 INFO: [Synth 8-638] synthesizing module 'Reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/Register_File/Register.vhd:42]
-ERROR: [Synth 8-26] attribute 'event not implemented [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/Register_File/Register.vhd:53]
 WARNING: [Synth 8-614] signal 'RegData' is read in the process but is not in the sensitivity list [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/Register_File/Register.vhd:47]
-ERROR: [Synth 8-285] failed synthesizing module 'Reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/Register_File/Register.vhd:42]
-ERROR: [Synth 8-285] failed synthesizing module 'top' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/new/top.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'Reg' (2#1) [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/Register_File/Register.vhd:42]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/Register_File/Register.vhd:34' bound to instance 'T2' of component 'Reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/new/top.vhd:253]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/Register_File/Register.vhd:34' bound to instance 'T3' of component 'Reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/new/top.vhd:254]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/Register_File/Register.vhd:34' bound to instance 'IR' of component 'Reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/new/top.vhd:256]
+INFO: [Synth 8-3491] module 'SE_9_16' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/Sign_Extenders/SE_9_16.vhd:3' bound to instance 'SE916' of component 'SE_9_16' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/new/top.vhd:258]
+INFO: [Synth 8-638] synthesizing module 'SE_9_16' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/Sign_Extenders/SE_9_16.vhd:10]
+INFO: [Synth 8-256] done synthesizing module 'SE_9_16' (3#1) [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/Sign_Extenders/SE_9_16.vhd:10]
+INFO: [Synth 8-3491] module 'SE_6_16' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/Sign_Extenders/SE_6_16.vhd:3' bound to instance 'SE616' of component 'SE_6_16' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/new/top.vhd:259]
+INFO: [Synth 8-638] synthesizing module 'SE_6_16' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/Sign_Extenders/SE_6_16.vhd:10]
+INFO: [Synth 8-256] done synthesizing module 'SE_6_16' (4#1) [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/Sign_Extenders/SE_6_16.vhd:10]
+INFO: [Synth 8-3491] module 'SE_1_16' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/Misc_components/SE_1_16.vhd:3' bound to instance 'SE116' of component 'SE_1_16' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/new/top.vhd:260]
+INFO: [Synth 8-638] synthesizing module 'SE_1_16' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/Misc_components/SE_1_16.vhd:10]
+INFO: [Synth 8-256] done synthesizing module 'SE_1_16' (5#1) [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/Misc_components/SE_1_16.vhd:10]
+INFO: [Synth 8-3491] module 'Incrementer_Decrementer' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/Incrementer_Decrementer/Incrementer.vhd:7' bound to instance 'Inc' of component 'Incrementer_Decrementer' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/new/top.vhd:262]
+INFO: [Synth 8-638] synthesizing module 'Incrementer_Decrementer' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/Incrementer_Decrementer/Incrementer.vhd:15]
+WARNING: [Synth 8-614] signal 'ID_Midway' is read in the process but is not in the sensitivity list [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/Incrementer_Decrementer/Incrementer.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'Incrementer_Decrementer' (6#1) [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/Incrementer_Decrementer/Incrementer.vhd:15]
+WARNING: [Synth 8-3848] Net CLK in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/new/top.vhd:205]
+WARNING: [Synth 8-3848] Net RST in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/new/top.vhd:205]
+WARNING: [Synth 8-3848] Net T1in in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/new/top.vhd:207]
+WARNING: [Synth 8-3848] Net T2in in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/new/top.vhd:207]
+WARNING: [Synth 8-3848] Net IRin in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/new/top.vhd:209]
+WARNING: [Synth 8-3848] Net SE916in in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/new/top.vhd:211]
+WARNING: [Synth 8-3848] Net SE616in in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/new/top.vhd:214]
+WARNING: [Synth 8-3848] Net SE116in in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/new/top.vhd:217]
+WARNING: [Synth 8-3848] Net IncIN in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/new/top.vhd:220]
+INFO: [Synth 8-256] done synthesizing module 'top' (7#1) [C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/new/top.vhd:38]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 418.500 ; gain = 157.129
+Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 418.672 ; gain = 142.113
 ---------------------------------------------------------------------------------
-synthesize failed
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 418.672 ; gain = 142.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 418.672 ; gain = 142.113
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "ALU_ZOUT" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 418.672 ; gain = 142.113
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 2     
+	   3 Input     16 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 2     
++---Registers : 
+	               16 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module ALU_1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 2     
+	   3 Input     16 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module Reg 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+Module Incrementer_Decrementer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 555.340 ; gain = 278.781
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 555.340 ; gain = 278.781
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 564.051 ; gain = 287.492
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 564.051 ; gain = 287.492
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 564.051 ; gain = 287.492
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 564.051 ; gain = 287.492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 564.051 ; gain = 287.492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 564.051 ; gain = 287.492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 564.051 ; gain = 287.492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     0|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 564.051 ; gain = 287.492
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 564.051 ; gain = 287.492
+Synthesis Optimization Complete : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 564.051 ; gain = 287.492
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 678.254 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
 INFO: [Common 17-83] Releasing license: Synthesis
-8 Infos, 2 Warnings, 0 Critical Warnings and 4 Errors encountered.
-synth_design failed
-ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
-INFO: [Common 17-206] Exiting Vivado at Wed Apr 27 16:01:34 2022...
+31 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 678.254 ; gain = 401.695
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 678.254 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 27 22:41:11 2022...

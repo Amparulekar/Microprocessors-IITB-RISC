@@ -222,7 +222,7 @@ end component;
     signal ImemA, ImemDin, ImemDout: STD_LOGIC_VECTOR(15 downto 0);
     signal DmemA, DmemDin, DmemDout: STD_LOGIC_VECTOR(15 downto 0);
     
-    signal BAin7,BAin6,BAin5,BAin4,BAin3,BAin2,BAin1,BAin0, BAout: STD_LOGIC_VECTOR(7 downto 0);
+    signal BAin7,BAin6,BAin5,BAin4,BAin3,BAin2,BAin1,BAin0,BAout7,BAout6,BAout5,BAout4,BAout3,BAout2,BAout1,BAout0: STD_LOGIC_VECTOR(7 downto 0);
     signal Decin: STD_LOGIC_VECTOR(15 downto 0);
     signal Decout: STD_LOGIC_VECTOR(2 downto 0);
     
@@ -255,11 +255,14 @@ begin
     
     IR: Reg port map(CLK=>CLK, CLR=>RST, D_in=>IRin, D_out1=>IRout, D_out2=>IRout);
     
-    SE916: SE_9_16 port map(SE916in, SE916out);
-    SE616: SE_6_16 port map(SE616in, SE616out);
-    SE116: SE_1_16 port map(SE116in, SE116out);
+    SE916: SE_9_16 port map(in_se_9_16=>SE916in, out_se_9_16=>SE916out);
+    SE616: SE_6_16 port map(in_se_6_16=>SE616in, out_se_6_16=>SE616out);
+    SE116: SE_1_16 port map(in_se_1_16=>SE116in, out_se_1_16=>SE116out);
     
-    Inc: Incrementer_Decrementer port map(INCin, INCout);
-    
+    Inc: Incrementer_Decrementer port map(ID_input=>INCin, ID_Output=>INCout);
+    BA: Bit_accessor port map(seven_in=>BAin7,six_in=>BAin6,five_in=>BAin5,four_in=>BAin4,three_in=>BAin3,two_in=>BAin2,one_in=>BAin1,zero_in=>BAin0,seven_out=>BAout7,six_out=>BAout6,five_out=>BAout5,four_out=>BAout4,three_out=>BAout3,two_out=>BAout2,one_out=>BAout1,zero_out=>BAout0);
+    Dec: decoder port map(BAout, Decout);
+    PCcon: gen111 port map(R7Addr, PCconsig);
+    SS: Shift_SEven port map(Shifterin,shifterout);
 
 end Behavioral;

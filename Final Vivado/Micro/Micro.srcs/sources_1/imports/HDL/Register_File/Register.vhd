@@ -50,7 +50,7 @@ begin
             D_out2 <= RegData; 
         if CLR = '1' then
             RegData <= "0000000000000000";
-        elsif CLK'EVENT then
+        elsif rising_edge(clk) then
                 RegData <= D_in;    
         end if;
     end process;        
