@@ -1,0 +1,498 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: synth_design -top top -part xc7k70tfbv676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 5312 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 362.426 ; gain = 100.949
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:38]
+WARNING: [Synth 8-5640] Port 'alu_cout' is missing in component declaration [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:39]
+WARNING: [Synth 8-5640] Port 'alu_zout' is missing in component declaration [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:39]
+INFO: [Synth 8-3491] module 'ALU_1' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/ALU/ALU.vhd:9' bound to instance 'ALU' of component 'ALU_1' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:263]
+INFO: [Synth 8-638] synthesizing module 'ALU_1' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/ALU/ALU.vhd:22]
+WARNING: [Synth 8-614] signal 'ALU_Result' is read in the process but is not in the sensitivity list [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/ALU/ALU.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'ALU_1' (1#1) [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/ALU/ALU.vhd:22]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Registers/Register.vhd:34' bound to instance 'T1' of component 'Reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:265]
+INFO: [Synth 8-638] synthesizing module 'Reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Registers/Register.vhd:42]
+WARNING: [Synth 8-614] signal 'RegData' is read in the process but is not in the sensitivity list [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Registers/Register.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'Reg' (2#1) [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Registers/Register.vhd:42]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Registers/Register.vhd:34' bound to instance 'T2' of component 'Reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:266]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Registers/Register.vhd:34' bound to instance 'T3' of component 'Reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:267]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Registers/Register.vhd:34' bound to instance 'IR' of component 'Reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:269]
+INFO: [Synth 8-3491] module 'SE_9_16' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Sign_Extenders/SE_9_16.vhd:3' bound to instance 'SE916' of component 'SE_9_16' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:271]
+INFO: [Synth 8-638] synthesizing module 'SE_9_16' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Sign_Extenders/SE_9_16.vhd:10]
+INFO: [Synth 8-256] done synthesizing module 'SE_9_16' (3#1) [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Sign_Extenders/SE_9_16.vhd:10]
+INFO: [Synth 8-3491] module 'SE_6_16' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Sign_Extenders/SE_6_16.vhd:3' bound to instance 'SE616' of component 'SE_6_16' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:272]
+INFO: [Synth 8-638] synthesizing module 'SE_6_16' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Sign_Extenders/SE_6_16.vhd:10]
+INFO: [Synth 8-256] done synthesizing module 'SE_6_16' (4#1) [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Sign_Extenders/SE_6_16.vhd:10]
+INFO: [Synth 8-3491] module 'SE_1_16' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/SE_1_16.vhd:3' bound to instance 'SE116' of component 'SE_1_16' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:273]
+INFO: [Synth 8-638] synthesizing module 'SE_1_16' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/SE_1_16.vhd:10]
+INFO: [Synth 8-256] done synthesizing module 'SE_1_16' (5#1) [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/SE_1_16.vhd:10]
+INFO: [Synth 8-3491] module 'Incrementer_Decrementer' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Incrementer_Decrementer/Incrementer.vhd:7' bound to instance 'Inc' of component 'Incrementer_Decrementer' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:275]
+INFO: [Synth 8-638] synthesizing module 'Incrementer_Decrementer' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Incrementer_Decrementer/Incrementer.vhd:14]
+WARNING: [Synth 8-614] signal 'ID_Midway' is read in the process but is not in the sensitivity list [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Incrementer_Decrementer/Incrementer.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'Incrementer_Decrementer' (6#1) [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Incrementer_Decrementer/Incrementer.vhd:14]
+INFO: [Synth 8-637] synthesizing blackbox instance 'Imem' of component 'design_2_blk_mem_gen_0_0' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:278]
+INFO: [Synth 8-637] synthesizing blackbox instance 'Dmem' of component 'design_2_blk_mem_gen_0_0' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:279]
+INFO: [Synth 8-3491] module 'Bit_accessor' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Bit_accessor/Bit_accessor.vhd:34' bound to instance 'BA' of component 'Bit_accessor' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:281]
+INFO: [Synth 8-638] synthesizing module 'Bit_accessor' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Bit_accessor/Bit_accessor.vhd:53]
+INFO: [Synth 8-256] done synthesizing module 'Bit_accessor' (7#1) [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Bit_accessor/Bit_accessor.vhd:53]
+INFO: [Synth 8-3491] module 'decoder' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/8_to_3_decoder/decoder.vhd:34' bound to instance 'Dec' of component 'decoder' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:282]
+INFO: [Synth 8-638] synthesizing module 'decoder' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/8_to_3_decoder/decoder.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'decoder' (8#1) [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/8_to_3_decoder/decoder.vhd:39]
+INFO: [Synth 8-3491] module 'gen111' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/111gen.vhd:34' bound to instance 'PCcon' of component 'gen111' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:283]
+INFO: [Synth 8-638] synthesizing module 'gen111' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/111gen.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'gen111' (9#1) [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/111gen.vhd:39]
+INFO: [Synth 8-3491] module 'Shift_seven' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Shift_Seven/Shift_Seven.vhd:7' bound to instance 'SS' of component 'Shift_seven' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:284]
+INFO: [Synth 8-638] synthesizing module 'Shift_seven' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Shift_Seven/Shift_Seven.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'Shift_seven' (10#1) [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Shift_Seven/Shift_Seven.vhd:14]
+INFO: [Synth 8-3491] module 'Register_File' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/Register_File.vhd:34' bound to instance 'RF' of component 'Register_File' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:286]
+INFO: [Synth 8-638] synthesizing module 'Register_File' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/Register_File.vhd:44]
+INFO: [Synth 8-3491] module 'MUX' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/MUX.vhd:34' bound to instance 'mux1' of component 'MUX' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/Register_File.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'MUX' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/MUX.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'MUX' (11#1) [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/MUX.vhd:47]
+INFO: [Synth 8-3491] module 'MUX' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/MUX.vhd:34' bound to instance 'mux2' of component 'MUX' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/Register_File.vhd:88]
+INFO: [Synth 8-3491] module 'DEMUX' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/DEMUX.vhd:34' bound to instance 'demux1' of component 'DEMUX' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/Register_File.vhd:90]
+INFO: [Synth 8-638] synthesizing module 'DEMUX' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/DEMUX.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'DEMUX' (12#1) [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/DEMUX.vhd:47]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Registers/Register.vhd:34' bound to instance 'reg0' of component 'Reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/Register_File.vhd:92]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Registers/Register.vhd:34' bound to instance 'reg1' of component 'Reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/Register_File.vhd:93]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Registers/Register.vhd:34' bound to instance 'reg2' of component 'Reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/Register_File.vhd:94]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Registers/Register.vhd:34' bound to instance 'reg3' of component 'Reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/Register_File.vhd:95]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Registers/Register.vhd:34' bound to instance 'reg4' of component 'Reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/Register_File.vhd:96]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Registers/Register.vhd:34' bound to instance 'reg5' of component 'Reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/Register_File.vhd:97]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Registers/Register.vhd:34' bound to instance 'reg6' of component 'Reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/Register_File.vhd:98]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Registers/Register.vhd:34' bound to instance 'reg7' of component 'Reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/Register_File.vhd:99]
+INFO: [Synth 8-256] done synthesizing module 'Register_File' (13#1) [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/Register_File.vhd:44]
+INFO: [Synth 8-3491] module 'mux1to2' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/mux2to1.vhd:34' bound to instance 'muxT1' of component 'mux1to2' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:288]
+INFO: [Synth 8-638] synthesizing module 'mux1to2' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/mux2to1.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'mux1to2' (14#1) [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/mux2to1.vhd:41]
+INFO: [Synth 8-3491] module 'mux1to3' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/mux3to1.vhd:34' bound to instance 'muxT2' of component 'mux1to3' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:290]
+INFO: [Synth 8-638] synthesizing module 'mux1to3' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/mux3to1.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'mux1to3' (15#1) [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/mux3to1.vhd:42]
+INFO: [Synth 8-3491] module 'mux8to1' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/mux8to1.vhd:34' bound to instance 'muxSE116' of component 'mux8to1' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:292]
+INFO: [Synth 8-638] synthesizing module 'mux8to1' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/mux8to1.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'mux8to1' (16#1) [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/mux8to1.vhd:47]
+INFO: [Synth 8-3491] module 'demux1to8' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/demux1to8.vhd:34' bound to instance 'demuxBA' of component 'demux1to8' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:294]
+INFO: [Synth 8-638] synthesizing module 'demux1to8' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/demux1to8.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'demux1to8' (17#1) [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/demux1to8.vhd:47]
+INFO: [Synth 8-3491] module 'mux1to6' declared at 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/mux6to1.vhd:34' bound to instance 'muxRFD3' of component 'mux1to6' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:300]
+INFO: [Synth 8-638] synthesizing module 'mux1to6' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/mux6to1.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'mux1to6' (18#1) [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/mux6to1.vhd:45]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:314]
+WARNING: [Synth 8-3848] Net ALUA in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:213]
+WARNING: [Synth 8-3848] Net ALUB in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:213]
+WARNING: [Synth 8-3848] Net ALUC in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:213]
+WARNING: [Synth 8-3848] Net ALUop in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:215]
+WARNING: [Synth 8-3848] Net RST in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:216]
+WARNING: [Synth 8-3848] Net IncIN in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:231]
+WARNING: [Synth 8-3848] Net ImemA in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:233]
+WARNING: [Synth 8-3848] Net ImemDin in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:233]
+WARNING: [Synth 8-3848] Net DmemA in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:234]
+WARNING: [Synth 8-3848] Net DmemDin in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:234]
+WARNING: [Synth 8-3848] Net PCconsig in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:240]
+WARNING: [Synth 8-3848] Net Shifterin in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:243]
+WARNING: [Synth 8-3848] Net RFA1 in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:245]
+WARNING: [Synth 8-3848] Net RFA2 in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:245]
+WARNING: [Synth 8-3848] Net RFA3 in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:245]
+WARNING: [Synth 8-3848] Net T1insel in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:248]
+WARNING: [Synth 8-3848] Net T2insel in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:250]
+WARNING: [Synth 8-3848] Net SE116sel in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:253]
+WARNING: [Synth 8-3848] Net BAsel in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:254]
+WARNING: [Synth 8-3848] Net A in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:256]
+WARNING: [Synth 8-3848] Net B in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:256]
+WARNING: [Synth 8-3848] Net C in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:256]
+WARNING: [Synth 8-3848] Net D in module/entity top does not have driver. [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:256]
+INFO: [Synth 8-256] done synthesizing module 'top' (19#1) [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/top.vhd:38]
+WARNING: [Synth 8-3331] design Shift_seven has unconnected port SS_Input[15]
+WARNING: [Synth 8-3331] design Shift_seven has unconnected port SS_Input[14]
+WARNING: [Synth 8-3331] design Shift_seven has unconnected port SS_Input[13]
+WARNING: [Synth 8-3331] design Shift_seven has unconnected port SS_Input[12]
+WARNING: [Synth 8-3331] design Shift_seven has unconnected port SS_Input[11]
+WARNING: [Synth 8-3331] design Shift_seven has unconnected port SS_Input[10]
+WARNING: [Synth 8-3331] design Shift_seven has unconnected port SS_Input[9]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 419.109 ; gain = 157.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 419.109 ; gain = 157.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 419.109 ; gain = 157.633
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+INFO: [Synth 8-5546] ROM "ALU_ZOUT" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-327] inferring latch for variable 'gen_reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/111gen.vhd:45]
+WARNING: [Synth 8-327] inferring latch for variable 'DEMUX_OUT0_reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/DEMUX.vhd:52]
+WARNING: [Synth 8-327] inferring latch for variable 'DEMUX_OUT1_reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/DEMUX.vhd:53]
+WARNING: [Synth 8-327] inferring latch for variable 'DEMUX_OUT2_reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/DEMUX.vhd:54]
+WARNING: [Synth 8-327] inferring latch for variable 'DEMUX_OUT3_reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/DEMUX.vhd:55]
+WARNING: [Synth 8-327] inferring latch for variable 'DEMUX_OUT4_reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/DEMUX.vhd:56]
+WARNING: [Synth 8-327] inferring latch for variable 'DEMUX_OUT5_reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/DEMUX.vhd:57]
+WARNING: [Synth 8-327] inferring latch for variable 'DEMUX_OUT6_reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/DEMUX.vhd:58]
+WARNING: [Synth 8-327] inferring latch for variable 'DEMUX_OUT7_reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Register_File/DEMUX.vhd:59]
+WARNING: [Synth 8-327] inferring latch for variable 'mux3to1out_reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/mux3to1.vhd:48]
+WARNING: [Synth 8-327] inferring latch for variable 'demuxout0_reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/demux1to8.vhd:53]
+WARNING: [Synth 8-327] inferring latch for variable 'demuxout1_reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/demux1to8.vhd:54]
+WARNING: [Synth 8-327] inferring latch for variable 'demuxout2_reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/demux1to8.vhd:55]
+WARNING: [Synth 8-327] inferring latch for variable 'demuxout3_reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/demux1to8.vhd:56]
+WARNING: [Synth 8-327] inferring latch for variable 'demuxout4_reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/demux1to8.vhd:57]
+WARNING: [Synth 8-327] inferring latch for variable 'demuxout5_reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/demux1to8.vhd:58]
+WARNING: [Synth 8-327] inferring latch for variable 'demuxout6_reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/demux1to8.vhd:59]
+WARNING: [Synth 8-327] inferring latch for variable 'demuxout7_reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/demux1to8.vhd:60]
+WARNING: [Synth 8-327] inferring latch for variable 'mux6to1out_reg' [C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.srcs/sources_1/imports/hdl/Misc_components/mux6to1.vhd:51]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 419.109 ; gain = 157.633
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 2     
+	   3 Input     16 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 2     
++---Registers : 
+	               16 Bit    Registers := 12    
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 5     
+	   9 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 16    
+	   4 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module ALU_1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 2     
+	   3 Input     16 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module Reg 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+Module Incrementer_Decrementer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+Module decoder 
+Detailed RTL Component Info : 
++---Muxes : 
+	   9 Input      3 Bit        Muxes := 1     
+Module DEMUX 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input      1 Bit        Muxes := 8     
+Module mux1to2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+Module mux1to3 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+Module demux1to8 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input      1 Bit        Muxes := 8     
+Module mux1to6 
+Detailed RTL Component Info : 
++---Muxes : 
+	   7 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3332] Sequential element (PCcon/gen_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PCcon/gen_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (PCcon/gen_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT0_reg[15]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT0_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT0_reg[13]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT0_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT0_reg[11]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT0_reg[10]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT0_reg[9]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT0_reg[8]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT0_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT0_reg[6]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT0_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT0_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT0_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT0_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT0_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT0_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT1_reg[15]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT1_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT1_reg[13]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT1_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT1_reg[11]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT1_reg[10]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT1_reg[9]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT1_reg[8]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT1_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT1_reg[6]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT1_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT1_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT1_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT1_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT1_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT1_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT2_reg[15]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT2_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT2_reg[13]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT2_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT2_reg[11]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT2_reg[10]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT2_reg[9]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT2_reg[8]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT2_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT2_reg[6]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT2_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT2_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT2_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT2_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT2_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT2_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT3_reg[15]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT3_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT3_reg[13]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT3_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT3_reg[11]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT3_reg[10]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT3_reg[9]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT3_reg[8]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT3_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT3_reg[6]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT3_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT3_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT3_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT3_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT3_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT3_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT4_reg[15]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT4_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT4_reg[13]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT4_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT4_reg[11]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT4_reg[10]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT4_reg[9]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT4_reg[8]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT4_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT4_reg[6]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT4_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT4_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT4_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT4_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT4_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT4_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT5_reg[15]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT5_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT5_reg[13]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT5_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT5_reg[11]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT5_reg[10]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT5_reg[9]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT5_reg[8]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT5_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT5_reg[6]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT5_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT5_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT5_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT5_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT5_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT5_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (RF/demux1/DEMUX_OUT6_reg[15]) is unused and will be removed from module top.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 539.809 ; gain = 278.332
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 539.809 ; gain = 278.332
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 539.809 ; gain = 278.332
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4649] Removing BlackBox instance Imem of module design_2_blk_mem_gen_0_0_bbox_1 having unconnected or no output ports
+INFO: [Synth 8-4649] Removing BlackBox instance Dmem of module design_2_blk_mem_gen_0_0_bbox_2 having unconnected or no output ports
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 539.809 ; gain = 278.332
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 539.809 ; gain = 278.332
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 539.809 ; gain = 278.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 539.809 ; gain = 278.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 539.809 ; gain = 278.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 539.809 ; gain = 278.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     0|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 539.809 ; gain = 278.332
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 282 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 539.809 ; gain = 278.332
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 539.809 ; gain = 278.332
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 645.934 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+81 Infos, 155 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 645.934 ; gain = 396.660
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 645.934 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/nikhi/Desktop/RISC-IITB-22-main/uP/uP.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 21 12:48:31 2022...
