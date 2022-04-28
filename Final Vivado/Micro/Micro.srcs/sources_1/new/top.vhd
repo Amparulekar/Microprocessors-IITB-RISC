@@ -222,7 +222,7 @@ end component;
     signal ImemA, ImemDin, ImemDout: STD_LOGIC_VECTOR(15 downto 0);
     signal DmemA, DmemDin, DmemDout: STD_LOGIC_VECTOR(15 downto 0);
     
-    signal BAin7,BAin6,BAin5,BAin4,BAin3,BAin2,BAin1,BAin0,BAout7,BAout6,BAout5,BAout4,BAout3,BAout2,BAout1,BAout0: STD_LOGIC_VECTOR(7 downto 0);
+    signal BAin7,BAin6,BAin5,BAin4,BAin3,BAin2,BAin1,BAin0,BAout,BAout7,BAout6,BAout5,BAout4,BAout3,BAout2,BAout1,BAout0: STD_LOGIC_VECTOR(7 downto 0);
     signal Decin: STD_LOGIC_VECTOR(15 downto 0);
     signal Decout: STD_LOGIC_VECTOR(2 downto 0);
     
@@ -242,7 +242,7 @@ end component;
     signal SE116sel: STD_LOGIC_VECTOR(2 downto 0);
     signal BAsel: STD_LOGIC_VECTOR(2 downto 0);
     
-    signal A,B,C,D: STD_LOGIC;
+    --signal A,B,C,D: STD_LOGIC;
 
     signal d3sel: STD_LOGIC_VECTOR(2 downto 0);
     
@@ -262,7 +262,33 @@ begin
     Inc: Incrementer_Decrementer port map(ID_input=>INCin, ID_Output=>INCout);
     BA: Bit_accessor port map(seven_in=>BAin7,six_in=>BAin6,five_in=>BAin5,four_in=>BAin4,three_in=>BAin3,two_in=>BAin2,one_in=>BAin1,zero_in=>BAin0,seven_out=>BAout7,six_out=>BAout6,five_out=>BAout5,four_out=>BAout4,three_out=>BAout3,two_out=>BAout2,one_out=>BAout1,zero_out=>BAout0);
     Dec: decoder port map(BAout, Decout);
-    PCcon: gen111 port map(R7Addr, PCconsig);
-    SS: Shift_SEven port map(Shifterin,shifterout);
+    PCcon: gen111 port map(gen=>R7Addr, Pcon=>PCconsig);
+    SS: Shift_SEven port map(ss_input=>Shifterin,ss_output=>shifterout);
 
+    RF: Register_File port map(A1=>RFA1,A2=>RFA2,A3=>RFA3,D1=>RFD1,D2=>RFD2,D3=>RFD3,CLK=>CLK);
+    muxT1: mux1to2 port map(mux2to1out=>T1in,mux2to1in1=>RFD3,mux2to1in2=>SE916out,mux2to1select=>T1insel);
+    
+    muxT2: mux1to3 port map(mux3to1out=>T2in, mux3to1in1=>RFD2, mux3to1in2=>SE116out, mux3to1in3=>SE616out, mux3to1select=>T2insel);
+    muxSE116: mux8to1 port map(muxin0=>IRout(0 downto 0),muxin1=>IRout(1 downto 1),muxin2=>IRout(2 downto 2),muxin3=>IRout(3 downto 3),muxin4=>IRout(4 downto 4),muxin5=>IRout(5 downto 5),muxin6=>IRout(6 downto 6),muxin7=>IRout(7 downto 7),muxout=>SE116in,sel=>SE116sel);
+    
+    demuxBA: demux1to8 port map(demuxout0=>BAin0,demuxout1=>BAin1,demuxout2=>BAin2,demuxout3=>BAin3,demuxout4=>BAin4,demuxout5=>BAin5,demuxout6=>BAin6,demuxout7=>BAin7, demuxin=>IRout(7 downto 0), sel=>BAsel);
+    
+--    d3sel(0) <= (not(A) and B and C) or (B and C and D) or ( not(a) and b and c and (not(d))) or (a and (not(b)) and c and (not(d)));
+--    d3sel(1) <= (not(a) and b and (not(c)) and (not(d))) or (not(a) and (not(b)) and c and d) or (a and b and c and d);
+--    d3sel(2) <= b and c and (not(d));
+    muxRFD3: mux1to6 port map(mux6to1out=>RFD3, mux6to1in1=>DmemDOut, mux6to1in2=>Shifterout, mux6to1in3=>Incout, mux6to1in4=>T3out, mux6to1in5=>T1out, mux6to1in6=>"0000000000000000", mux6to1select=>d3sel);
+    
+    --RFA1<= (((b and (not(c)) and (not(d))) or ( a and (not(c)) and ( not(d))) or (a and (not(b)) and (not(c)) and d) or (a and b and c and d)) and IRout) or (((b and (not(c)) and d) or (a and (not(c)) and d) or((not(a))and(not(b))and(not(d))andc))and R7addr) or ((a and (not(b)) and c and d)and Decout); 
+    
+    ALU_Carry <= IRout(1);
+    ALU_Zero <= IRout(0);
+    ALU_B<=T2out;
+    ALU_A<=T1out;
+    
+    SE616in <=  IRout(5 downto 0);
+    SE916in <= IRout (8 downto 0);
+    IRin <= ImemDout;
+    
+       
+    
 end Behavioral;

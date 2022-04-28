@@ -86,6 +86,14 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/HDL/Register_File/DEMUX.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/Register_File/DEMUX.vhd"/>
+          <Attr Name="ImportTime" Val="1651051606"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/HDL/Incrementer_Decrementer/Incrementer.vhd">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/Incrementer_Decrementer/Incrementer.vhd"/>
@@ -94,9 +102,25 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/HDL/Register_File/MUX.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/Register_File/MUX.vhd"/>
+          <Attr Name="ImportTime" Val="1651051606"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/HDL/Register_File/Register.vhd">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/Register_File/Register.vhd"/>
+          <Attr Name="ImportTime" Val="1651051606"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/HDL/Register_File/Register_File.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/Register_File/Register_File.vhd"/>
           <Attr Name="ImportTime" Val="1651051606"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -142,35 +166,48 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/HDL/Misc_components/demux1to8.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/Misc_components/demux1to8.vhd"/>
+          <Attr Name="ImportTime" Val="1651051606"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/HDL/Misc_components/mux2to1.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/Misc_components/mux2to1.vhd"/>
+          <Attr Name="ImportTime" Val="1651051606"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/HDL/Misc_components/mux3to1.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/Misc_components/mux3to1.vhd"/>
+          <Attr Name="ImportTime" Val="1651051606"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/HDL/Misc_components/mux6to1.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/Misc_components/mux6to1.vhd"/>
+          <Attr Name="ImportTime" Val="1651051606"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/HDL/Misc_components/mux8to1.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/Misc_components/mux8to1.vhd"/>
+          <Attr Name="ImportTime" Val="1651051606"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/new/top.vhd">
         <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/HDL/Register_File/DEMUX.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/Register_File/DEMUX.vhd"/>
-          <Attr Name="ImportTime" Val="1651051606"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/HDL/Register_File/MUX.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/Register_File/MUX.vhd"/>
-          <Attr Name="ImportTime" Val="1651051606"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/HDL/Register_File/Register_File.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/Register_File/Register_File.vhd"/>
-          <Attr Name="ImportTime" Val="1651051606"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -188,51 +225,6 @@
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/Misc_components/demux1to3.vhd"/>
-          <Attr Name="ImportTime" Val="1651051606"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/HDL/Misc_components/demux1to8.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/Misc_components/demux1to8.vhd"/>
-          <Attr Name="ImportTime" Val="1651051606"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/HDL/Misc_components/mux2to1.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/Misc_components/mux2to1.vhd"/>
-          <Attr Name="ImportTime" Val="1651051606"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/HDL/Misc_components/mux3to1.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/Misc_components/mux3to1.vhd"/>
-          <Attr Name="ImportTime" Val="1651051606"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/HDL/Misc_components/mux6to1.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/Misc_components/mux6to1.vhd"/>
-          <Attr Name="ImportTime" Val="1651051606"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/HDL/Misc_components/mux8to1.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/Misc_components/mux8to1.vhd"/>
           <Attr Name="ImportTime" Val="1651051606"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -267,7 +259,7 @@
       <Filter Type="Srcs"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="Register_File"/>
+        <Option Name="TopModule" Val="top"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>

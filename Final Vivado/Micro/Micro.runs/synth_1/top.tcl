@@ -18,6 +18,8 @@ proc create_report { reportName command } {
   }
 }
 set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z020clg484-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -32,12 +34,16 @@ set_property ip_output_repo {c:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Viva
 set_property ip_cache_permissions {read write} [current_project]
 add_files {{C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/ip.coe}}
 read_vhdl -library xil_defaultlib {
+  {C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/Register_File/111gen.vhd}
   {C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/ALU/ALU.vhd}
+  {C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/Bit_accessor/Bit_accessor.vhd}
   {C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/Incrementer_Decrementer/Incrementer.vhd}
   {C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/Register_File/Register.vhd}
   {C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/Misc_components/SE_1_16.vhd}
   {C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/Sign_Extenders/SE_6_16.vhd}
   {C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/Sign_Extenders/SE_9_16.vhd}
+  {C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/Shift_Seven/Shift_Seven.vhd}
+  {C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/imports/HDL/8_to_3_decoder/decoder.vhd}
   {C:/Users/nikhi/Desktop/RISC-IITB-22-main/Final Vivado/Micro/Micro.srcs/sources_1/new/top.vhd}
 }
 # Mark all dcp files as not used in implementation to prevent them from being
