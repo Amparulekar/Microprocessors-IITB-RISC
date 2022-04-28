@@ -284,10 +284,12 @@ begin
     ALU_Zero <= IRout(0);
     ALU_B<=T2out;
     ALU_A<=T1out;
-    
+    shifterin<=t1out;
+    RFD3<=shifterout;
     SE616in <=  IRout(5 downto 0);
     SE916in <= IRout (8 downto 0);
     IRin <= ImemDout;
+    
     
        
     
