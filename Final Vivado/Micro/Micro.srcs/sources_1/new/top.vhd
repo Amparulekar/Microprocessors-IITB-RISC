@@ -193,6 +193,19 @@ end component;
            mux6to1in6: in STD_LOGIC_VECTOR(15 downto 0);
            mux6to1select: in STD_LOGIC_VECTOR(2 downto 0));
     end component mux1to6;
+component memory is
+    Port ( clk : in STD_LOGIC;
+           we : in STD_LOGIC;
+           addressin : in STD_LOGIC_vector(15 downto 0);
+           datain : in STD_LOGIC_vector(15 downto 0);
+           dataout : out STD_LOGIC_vector(15 downto 0));
+end component;  
+    
+    signal dmclka :  STD_LOGIC;
+    signal dmwea :  STD_LOGIC;
+    signal dmaddressin : STD_LOGIC_VECTOR(15 DOWNTO 0);
+    signal dmdatain :  STD_LOGIC_VECTOR(15 DOWNTO 0);
+    signal dmdataout : STD_LOGIC_VECTOR(15 DOWNTO 0);
     
      signal ALU_A :  std_logic_vector (15 downto 0) := (others => '0');
      signal ALU_B : std_logic_vector (15 downto 0) := (others => '0');
@@ -218,7 +231,7 @@ end component;
     signal SE116out: STD_LOGIC_VECTOR(15 downto 0);
     
     signal IncIN,IncOut: STD_LOGIC_VECTOR(15 downto 0);
-    
+        
     signal ImemA, ImemDin, ImemDout: STD_LOGIC_VECTOR(15 downto 0);
     signal DmemA, DmemDin, DmemDout: STD_LOGIC_VECTOR(15 downto 0);
     
@@ -277,7 +290,9 @@ begin
 --    d3sel(1) <= (not(a) and b and (not(c)) and (not(d))) or (not(a) and (not(b)) and c and d) or (a and b and c and d);
 --    d3sel(2) <= b and c and (not(d));
     muxRFD3: mux1to6 port map(mux6to1out=>RFD3, mux6to1in1=>DmemDOut, mux6to1in2=>Shifterout, mux6to1in3=>Incout, mux6to1in4=>T3out, mux6to1in5=>T1out, mux6to1in6=>"0000000000000000", mux6to1select=>d3sel);
-    
+    --Datamemory: blk_mem_gen_0(clka=>dmclka,wea=>dmwea,addra=>dmaddra,dina=>dmdina,douta=>dmdouta);
+    Datamemory: memory port map(clk=>clk,we=>dmwea,addressin=>dmaddressin,datain=>dmemdin,dataout=>dmemdout);
+    InstructionMemory: memory port map ()
     --RFA1<= (((b and (not(c)) and (not(d))) or ( a and (not(c)) and ( not(d))) or (a and (not(b)) and (not(c)) and d) or (a and b and c and d)) and IRout) or (((b and (not(c)) and d) or (a and (not(c)) and d) or((not(a))and(not(b))and(not(d))andc))and R7addr) or ((a and (not(b)) and c and d)and Decout); 
     
     ALU_Carry <= IRout(1);
